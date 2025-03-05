@@ -2,6 +2,7 @@ version: "3.3"
 services:
   ffmpeg-recorder:
     build: .
+    pull_policy: build
     container_name: ffmpeg-recorder
     environment:
       - SNAPSHOT_URL=http://snapshot_url
