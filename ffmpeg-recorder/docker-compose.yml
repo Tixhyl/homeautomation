@@ -4,7 +4,12 @@ services:
     build: .
     pull_policy: build
     container_name: ffmpeg-recorder
-
+    environment:
+      - SNAPSHOT_URL=http://192.168.30.50:8080/image/front/img.jpg
+      - FPS=15
+      - CLIP_LENGTH=900
+      - RETENTION_DAYS=60
+      - TZ=Europe/Brussels
     volumes:
       - /mnt/nfs/fast-dockers/willow-recordings:/recordings
     restart: unless-stopped
