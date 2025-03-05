@@ -10,6 +10,7 @@ services:
       - CLIP_LENGTH=900
       - RETENTION_DAYS=60
       - TZ=Europe/Brussels
+      - QUALITY=24
     volumes:
       - /mnt/nfs/fast-dockers/willow-recordings:/recordings
     restart: unless-stopped
